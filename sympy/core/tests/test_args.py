@@ -1674,6 +1674,11 @@ def test_sympy__matrices__expressions__funcmatrix__FunctionMatrix():
     assert _test_args(FunctionMatrix(3, 3, Lambda((i, j), i - j) ))
 
 
+def test_sympy__matrices__expressions__permutation__PermutationMatrix():
+    from sympy.matrices.expressions.permutation import PermutationMatrix
+    assert _test_args(PermutationMatrix([2, 0, 1]))
+
+
 def test_sympy__physics__gaussopt__BeamParameter():
     from sympy.physics.gaussopt import BeamParameter
     assert _test_args(BeamParameter(530e-9, 1, w=1e-3))
